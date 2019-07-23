@@ -7,6 +7,8 @@ const authenticatedOptions = (
   <React.Fragment>
     <Link to="/change-password">Change Password</Link>
     <Link to="/sign-out">Sign Out</Link>
+    <Link to="/create-review">Write a New Review</Link>
+    <Link to="/cars">All Reviews</Link>
   </React.Fragment>
 )
 
@@ -25,7 +27,9 @@ const alwaysOptions = (
 
 const Header = ({ user }) => (
   <header className="main-header">
-    <h1>Car Reviews</h1>
+    <h1>Beep
+      <img src="public/car-logo.png" alt="logo"/>
+    </h1>
     <nav>
       { user && <span>Welcome, {user.email}</span>}
       { user ? authenticatedOptions : unauthenticatedOptions }

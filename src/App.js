@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.scss'
-import { Route } from 'react-router-dom'
+import { Route, withRouter } from 'react-router-dom'
 
 import AuthenticatedRoute from './auth/components/AuthenticatedRoute'
 import Header from './header/Header'
@@ -8,6 +8,10 @@ import SignUp from './auth/components/SignUp'
 import SignIn from './auth/components/SignIn'
 import SignOut from './auth/components/SignOut'
 import ChangePassword from './auth/components/ChangePassword'
+
+import CarCreate from './auth/components/CarCreate'
+import Cars from './auth/components/Cars'
+import Car from './auth/components/Car'
 
 import Alert from 'react-bootstrap/Alert'
 
@@ -55,10 +59,19 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword alert={this.alert} user={user} />
           )} />
+          <AuthenticatedRoute user={user} path='/create-review' render={() => (
+            <CarCreate alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/cars' render={() => (
+            <Cars alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/cars/:id' render={() => (
+            <Car alert={this.alert} user={user} />
+          )} />
         </main>
       </React.Fragment>
     )
   }
 }
 
-export default App
+export default withRouter(App)
