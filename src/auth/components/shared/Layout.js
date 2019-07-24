@@ -4,7 +4,7 @@ import Nav from './Nav'
 import Footer from './Footer'
 
 const Layout = props => (
-  <div>
+  <div className="form">
     <Nav />
 
     {props.children}

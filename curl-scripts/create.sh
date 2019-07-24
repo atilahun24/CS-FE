@@ -10,7 +10,8 @@ curl "https://git.heroku.com/whispering-fjord-26435.git" \
       "model": "'"${MODEL}"'",
       "year": "'"${YEAR}"'",
       "vehicle_type": "'"${TYPE}"'",
-      "grade": "'"${GRADE}"'"
+      "grade": "'"${GRADE}"'",
+      "description": "'"{DESC}"'"
     }
   }'
 

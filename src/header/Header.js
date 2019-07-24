@@ -27,8 +27,9 @@ const alwaysOptions = (
 
 const Header = ({ user }) => (
   <header className="main-header">
-    <h1>Beep
-      <img src="public/car-logo.png" alt="logo"/>
+    <h1>
+      <img src="car-logo.png" alt="logo" width="120" height="110"/>
+      Beep
     </h1>
     <nav>
       { user && <span>Welcome, {user.email}</span>}

@@ -63,6 +63,9 @@ class Car extends Component {
         <h5 className="grade" >
           Overall Grade: {car.grade}
         </h5>
+        <div>
+          {car.description}
+        </div>
         <Link to="/cars">Back to all Reviews</Link>
         <button onClick={this.destroy} type="submit" className="btn btn-danger">Delete Review</button>
         <Link to={`/cars/${this.props.match.params.id}/edit`}>

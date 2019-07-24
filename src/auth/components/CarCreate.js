@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Layout from './shared/Layout'
 import { Redirect } from 'react-router-dom'
 import CarForm from './shared/CarForm'
+import messages from '../messages'
 
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
@@ -15,7 +16,8 @@ class CarCreate extends Component {
         model: '',
         year: '',
         vehicle_type: '',
-        grade: ''
+        grade: '',
+        description: ''
       },
       createdCarId: null
     }
@@ -43,6 +45,7 @@ class CarCreate extends Component {
         data: { car: this.state.car }
       })
         .then(res => this.setState({ createdCarId: res.data.car.id }))
+        .then(() => this.props.alert(messages.carCreateSuccess, 'success'))
         .catch(console.error)
     }
 
@@ -57,7 +60,7 @@ class CarCreate extends Component {
 
       return (
         <Layout>
-          <h4>Create a new Car Review</h4>
+          <h4 id="form1">Create a new Car Review</h4>
           <CarForm
             car={ car }
             handleChange={handleChange}

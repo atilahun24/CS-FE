@@ -56,7 +56,8 @@ class CarEdit extends Component {
       },
       data: { car: this.state.car }
     })
-      .then(() => this.props.history.push(`/cars/${this.state.car._id}`))
+      // .then(() => this.props.history.push(`/cars/${this.state.car._id}`))
+      .then(() => this.setState({ edited: true }))
       .then(() => this.props.alert('You edited your review!', 'success'))
       .catch(() => this.props.alert('We are unable to update your review', 'danger'))
   }
@@ -73,13 +74,13 @@ class CarEdit extends Component {
     if (edited) {
       return <Redirect to={
         {
-          pathname: `/cars/${this.props.match.params._id}`
+          pathname: `/cars/${this.props.match.params.id}`
         }
       }/>
     }
 
     return (
-      <Layout md="8" lg="6">
+      <Layout md="8" lg="6" className="form1">
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="title">
             <Form.Label>Make</Form.Label>
@@ -133,6 +134,17 @@ class CarEdit extends Component {
               name="grade"
               onChange={this.handleChange}
               value={car.grade}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="description">
+            <Form.Label>Review</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Description"
+              name="description"
+              onChange={this.handleChange}
+              value={car.description}
             />
           </Form.Group>
 
