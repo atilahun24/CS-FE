@@ -52,7 +52,7 @@ class CarCreate extends Component {
       console.log(car)
 
       if (createdCarId) {
-        return <Redirect to={`/car/${createdCarId}`}/>
+        return <Redirect to={`/cars/${createdCarId}`}/>
       }
 
       return (

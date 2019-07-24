@@ -1,10 +1,10 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 
 const Nav = () => (
   <nav className="border border-success" id="navBar">
-    <NavLink to ='/cars'>  Back to All Reviews  </NavLink>
   </nav>
 )
+// <NavLink to ='/cars'>  Back to All Reviews  </NavLink>
 
 export default Nav

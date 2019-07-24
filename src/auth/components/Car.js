@@ -25,7 +25,10 @@ class Car extends Component {
   destroy = () => {
     axios({
       url: `${apiUrl}/cars/${this.props.match.params.id}`,
-      method: 'DELETE'
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Token token=${this.props.user.token}`
+      }
     })
       .then(() => this.setState({ deleted: true }))
       .catch(err => this.setState({ error: err.message }))
