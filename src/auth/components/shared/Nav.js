@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const Nav = () => (
   <nav className="border border-success" id="navBar">
-    <NavLink to ='/cars'>  Back to All Reviews  ||  </NavLink>
+    <NavLink to ='/cars'>  Back to All Reviews  </NavLink>
   </nav>
 )
 

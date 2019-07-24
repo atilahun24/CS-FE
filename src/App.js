@@ -12,6 +12,7 @@ import ChangePassword from './auth/components/ChangePassword'
 import CarCreate from './auth/components/CarCreate'
 import Cars from './auth/components/Cars'
 import Car from './auth/components/Car'
+import CarEdit from './auth/components/CarEdit'
 
 import Alert from 'react-bootstrap/Alert'
 
@@ -53,20 +54,23 @@ class App extends Component {
           <Route path='/sign-in' render={() => (
             <SignIn alert={this.alert} setUser={this.setUser} />
           )} />
-          <AuthenticatedRoute user={user} path='/sign-out' render={() => (
+          <AuthenticatedRoute user={user} exact path='/sign-out' render={() => (
             <SignOut alert={this.alert} clearUser={this.clearUser} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/change-password' render={() => (
+          <AuthenticatedRoute user={user} exact path='/change-password' render={() => (
             <ChangePassword alert={this.alert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/create-review' render={() => (
+          <AuthenticatedRoute user={user} exact path='/create-review' render={() => (
             <CarCreate alert={this.alert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/cars' render={() => (
+          <AuthenticatedRoute user={user} exact path='/cars' render={() => (
             <Cars alert={this.alert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/cars/:id' render={() => (
+          <AuthenticatedRoute user={user} exact path='/cars/:id' render={() => (
             <Car alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} exact path='/cars/:id/edit' render={() => (
+            <CarEdit alert={this.alert} user={user} />
           )} />
         </main>
       </React.Fragment>
