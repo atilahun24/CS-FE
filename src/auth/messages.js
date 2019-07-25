@@ -9,5 +9,7 @@ export default {
   changePasswordSuccess: 'Password changed successfully!',
   changePasswordFailure: 'Failed to change passwords. Check your old password' +
                          ' and try again.',
-  carCreateSuccess: 'Your review has been posted!'
+  carCreateSuccess: 'Beep Beep! Your review has been posted!',
+  deleteCarSuccess: 'Your review has been deleted.',
+  deleteCarFailure: 'You cannot delete a review that does not belong to you'
 }

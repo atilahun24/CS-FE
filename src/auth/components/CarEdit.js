@@ -59,7 +59,7 @@ class CarEdit extends Component {
       // .then(() => this.props.history.push(`/cars/${this.state.car._id}`))
       .then(() => this.setState({ edited: true }))
       .then(() => this.props.alert('You edited your review!', 'success'))
-      .catch(() => this.props.alert('We are unable to update your review', 'danger'))
+      .catch(() => this.props.alert('You cannot change another users review', 'danger'))
   }
 
   render () {

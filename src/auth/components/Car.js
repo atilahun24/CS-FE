@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link, Redirect, withRouter } from 'react-router-dom'
 import Layout from './shared/Layout'
+import messages from '../messages'
 
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
@@ -31,7 +32,9 @@ class Car extends Component {
       }
     })
       .then(() => this.setState({ deleted: true }))
+      .then(() => this.props.alert(messages.deleteCarSuccess, 'success'))
       .catch(err => this.setState({ error: err.message }))
+      .then(() => this.props.alert(messages.deleteCarFailure, 'danger'))
   }
 
   render () {
@@ -44,7 +47,7 @@ class Car extends Component {
     }
 
     if (error) {
-      return <p>ERROR: {error}</p>
+      // return <p>ERROR: {error}</p>
     }
 
     if (!car) {
