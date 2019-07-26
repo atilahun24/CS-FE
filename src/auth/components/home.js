@@ -23,7 +23,7 @@ const Home = () => (
 
       <Carousel.Caption>
         <h3>2014 VW GTI</h3>
-        <p>{'"Simply amazing car... the 2.0 Turbo is quick. It is strong all through the rev range, very little turbo lag.  It has an Audi-grade interior and fit/finish, love the plaid seats and they are very comfortable (and heated!). This is the only car on the planet that I prefer the automatic over a stick; the DSG is brilliant! My car also has the Pirelli tires as opposed to the Dunlops. The GTI is a ball to drive, but civilized, too."'} -Calvin, Boston</p>
+        <p>{'"Simply amazing car... the 2.0 Turbo is quick. It is strong all through the rev range, very little turbo lag.  It has an Audi-grade interior and fit/finish, love the plaid seats and they are very comfortable (and heated!). This is the only car on the planet that I prefer the automatic over a stick; the DSG is brilliant! My car also has the Pirelli tires as opposed to the Dunlops. The GTI is a ball to drive, but civilized, too. 10/10, would buy again."'} -Calvin, Boston</p>
       </Carousel.Caption>
     </Carousel.Item>
     <Carousel.Item style={{ height: '100%' }}>

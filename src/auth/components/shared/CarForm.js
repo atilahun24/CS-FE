@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Form from 'react-bootstrap/Form'
 
 const CarForm = ({ car, handleSubmit, handleChange, cancelPath }) => (
-  <form onSubmit={handleSubmit} id="form1">
+  <Form onSubmit={handleSubmit} id="form1">
 
     <label>Vehicle Make</label>
     <input
@@ -61,7 +62,7 @@ const CarForm = ({ car, handleSubmit, handleChange, cancelPath }) => (
     <button type="submit" className="btn btn-success">Submit</button>
     <Link to={cancelPath}>
     </Link>
-  </form>
+  </Form>
 
   // <button>Cancel</button>
 )

@@ -42,19 +42,19 @@ class Cars extends Component {
   }
 
   handleChange = event => {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     const filteredCars = this.state.cars.filter(car => event.target.value === car.make)
     this.setState({ displayCars: filteredCars })
   }
 
   handleChange2 = event => {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     const filteredCars2 = this.state.cars.filter(car => event.target.value === car.model)
     this.setState({ displayCars: filteredCars2 })
   }
 
   handleChange3 = event => {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     const filteredCars3 = this.state.cars.filter(car => +event.target.value === car.year)
     this.setState({ displayCars: filteredCars3 })
   }

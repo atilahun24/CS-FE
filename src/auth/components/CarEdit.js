@@ -69,7 +69,7 @@ class CarEdit extends Component {
     const { handleChange, handleSubmit } = this
     const { car, edited } = this.state
     // this will allow you to see every single letter typed in the form
-    console.log(this.state)
+    // console.log(this.state)
 
     if (edited) {
       return <Redirect to={

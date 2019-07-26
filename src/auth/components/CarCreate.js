@@ -52,7 +52,7 @@ class CarCreate extends Component {
     render () {
       const { handleChange, handleSubmit } = this
       const { car, createdCarId } = this.state
-      console.log(car)
+      // console.log(car)
 
       if (createdCarId) {
         return <Redirect to={`/cars/${createdCarId}`}/>
