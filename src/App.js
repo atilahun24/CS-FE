@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.scss'
 import { Route, withRouter } from 'react-router-dom'
+import Home from './auth/components/home'
 
 import AuthenticatedRoute from './auth/components/AuthenticatedRoute'
 import Header from './header/Header'
@@ -41,12 +42,13 @@ class App extends Component {
       <React.Fragment>
         <Header user={user} />
         {alerts.map((alert, index) => (
-          <Alert key={index} dismissible variant={alert.type}>
+          <Alert key={index} dismissible variant={alert.type} className='alert2'>
             <Alert.Heading>
               {alert.message}
             </Alert.Heading>
           </Alert>
         ))}
+        <Route exact path='/' component={Home} />
         <main className="container" >
           <Route path='/sign-up' render={() => (
             <SignUp alert={this.alert} setUser={this.setUser} />

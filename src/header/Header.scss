@@ -2,10 +2,17 @@ $charcoal: #bbb;
 
 .main-header {
   align-items: center;
-  border-bottom: 1px solid $charcoal;
+  // border-bottom: 1px solid $charcoal;
   display: flex;
   height: 100px;
   padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: transparentize(white, .4);
+
 
   a,
   span {
