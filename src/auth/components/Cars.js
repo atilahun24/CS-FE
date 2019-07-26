@@ -109,7 +109,7 @@ class Cars extends Component {
     return (
       <Layout>
         <h4 id='carsHeader' >Cars</h4>
-        <Form>
+        <Form className="form2">
           <Row>
             <Col>
               <Form.Control size="lg" as='select' id='list' className="border border-primary" onChange={this.handleChange}>
