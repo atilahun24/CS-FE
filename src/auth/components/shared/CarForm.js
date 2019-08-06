@@ -59,7 +59,7 @@ const CarForm = ({ car, handleSubmit, handleChange, cancelPath }) => (
       onChange={handleChange}
     />
 
-    <button type="submit" className="btn btn-success">Submit</button>
+    <button type="submit" className="btn btn-success" id="submitReview">Submit</button>
     <Link to={cancelPath}>
     </Link>
   </Form>

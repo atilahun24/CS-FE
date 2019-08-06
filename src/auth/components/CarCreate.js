@@ -60,7 +60,6 @@ class CarCreate extends Component {
 
       return (
         <Layout>
-          <h4 id="form1">Create a new Car Review</h4>
           <CarForm
             car={ car }
             handleChange={handleChange}

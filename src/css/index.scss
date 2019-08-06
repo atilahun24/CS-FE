@@ -27,11 +27,49 @@ body {
   margin-top: 100px;
 }
 
+
+.form1 {
+  // background-color: #b3e0ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15% auto 0;
+  max-width: 600px;
+  margin-bottom: 200px;
+  margin-top: 200px;
+}
+
 #form1 {
   // background-color: #b3e0ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15% auto 0;
+  max-width: 600px;
+  margin-bottom: 200px;
   margin-top: 200px;
+}
+
+#footer {
+  text-align: center;
+  margin-top: 200px;
+}
+
+#individualReview {
+  margin-top: 170px;
+  border-style: inset;
+  // background-image: url("https://s8096.pcdn.co/wp-content/uploads/2013/08/car-brands.jpg");
+  background-color: #e6ecff;
 }
 
 #list {
   background-color: #b3e0ff;
+}
+
+#carsHeader {
+  margin-top: 150px;
+}
+
+#submitReview {
+  margin-top: 30px;
 }

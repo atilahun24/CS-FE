@@ -80,8 +80,8 @@ class CarEdit extends Component {
     }
 
     return (
-      <Layout md="8" lg="6" className="form1">
-        <Form onSubmit={handleSubmit}>
+      <Layout>
+        <Form md="8" lg="6" className="form1" onSubmit={handleSubmit}>
           <Form.Group controlId="title">
             <Form.Label>Make</Form.Label>
             <Form.Control

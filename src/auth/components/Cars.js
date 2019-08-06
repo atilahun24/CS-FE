@@ -108,7 +108,7 @@ class Cars extends Component {
     // cars is an array that we are mapping over
     return (
       <Layout>
-        <h4 id='carsHeader' >Cars</h4>
+        <h4 id='carsHeader' >Search for a vehicle:</h4>
         <Form className="form2">
           <Row>
             <Col>

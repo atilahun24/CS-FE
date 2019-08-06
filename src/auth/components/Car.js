@@ -56,24 +56,27 @@ class Car extends Component {
 
     return (
       <Layout>
-        <h4>{car.make} {car.model}</h4>
-        <div>
+        <div id="individualReview" className="rounded">
+          <h4>{car.make} {car.model}</h4>
+          <div>
           Year: {car.year}
-        </div>
-        <div>
+          </div>
+          <div>
           Type: {car.vehicle_type}
-        </div>
-        <h5 className="grade" >
+          </div>
+          <h5 className="grade" >
           Overall Grade: {car.grade}
-        </h5>
-        <div>
-          {car.description}
+          </h5>
+          <div>
+            <h8>Owner Review: </h8>
+            {car.description}
+          </div>
+          <Link to="/cars">Back to all Reviews</Link>
+          <button onClick={this.destroy} type="submit" className="btn btn-danger">Delete Review</button>
+          <Link to={`/cars/${this.props.match.params.id}/edit`}>
+            <button className="btn btn-secondary">Edit Review</button>
+          </Link>
         </div>
-        <Link to="/cars">Back to all Reviews</Link>
-        <button onClick={this.destroy} type="submit" className="btn btn-danger">Delete Review</button>
-        <Link to={`/cars/${this.props.match.params.id}/edit`}>
-          <button className="btn btn-secondary">Edit Review</button>
-        </Link>
       </Layout>
     )
   }
