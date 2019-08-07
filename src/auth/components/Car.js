@@ -33,8 +33,8 @@ class Car extends Component {
     })
       .then(() => this.setState({ deleted: true }))
       .then(() => this.props.alert(messages.deleteCarSuccess, 'success'))
-      .catch(err => this.setState({ error: err.message }))
-      .then(() => this.props.alert(messages.deleteCarFailure, 'danger'))
+      // .catch(err => this.setState({ error: err.message }))
+      .catch(() => this.props.alert(messages.deleteCarFailure, 'danger'))
   }
 
   render () {
