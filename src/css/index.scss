@@ -24,9 +24,18 @@ body {
   margin: 0;
   padding: 0;
 
-  // &::before {
-  //   background-image: ;
-  // }
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url('https://atilahun24.github.io/CS-FE/road.jpg');
+    z-index: -1;
+    opacity: .5;
+    background-size: cover;
+  }
 }
 
 .alert {
