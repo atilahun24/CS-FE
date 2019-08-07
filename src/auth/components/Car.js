@@ -57,25 +57,32 @@ class Car extends Component {
     return (
       <Layout>
         <div id="individualReview" className="rounded">
-          <h4>{car.make} {car.model}</h4>
+          <header className="d-flex justify-content-between">
+            <h4>{car.make} {car.model}</h4>
+            <h5 className="grade" >
+            Overall Grade:
+              <span className={`carGrade ${car.grade.toLowerCase().charAt(0)}`}>{car.grade}</span>
+            </h5>
+          </header>
           <div>
           Year: {car.year}
           </div>
           <div>
           Type: {car.vehicle_type}
           </div>
-          <h5 className="grade" >
-          Overall Grade: {car.grade}
-          </h5>
           <div>
-            <h8>Owner Review: </h8>
+            Owner Review:
             {car.description}
           </div>
-          <Link to="/cars">Back to all Reviews</Link>
-          <button onClick={this.destroy} type="submit" className="btn btn-danger">Delete Review</button>
-          <Link to={`/cars/${this.props.match.params.id}/edit`}>
-            <button className="btn btn-secondary">Edit Review</button>
-          </Link>
+          <div className="d-flex justify-content-between mt-3">
+            <div>
+              <button onClick={this.destroy} type="submit" className="btn btn-danger mr-1">Delete Review</button>
+              <Link to={`/cars/${this.props.match.params.id}/edit`}>
+                <button className="btn btn-warning">Edit Review</button>
+              </Link>
+            </div>
+            <Link to="/cars" className="btn btn-primary">Back to all Reviews</Link>
+          </div>
         </div>
       </Layout>
     )

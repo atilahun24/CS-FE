@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './App.scss'
+// import './App.scss'
 import { Route, withRouter } from 'react-router-dom'
 import Home from './auth/components/home'
 
@@ -42,7 +42,7 @@ class App extends Component {
       <React.Fragment>
         <Header user={user} />
         {alerts.map((alert, index) => (
-          <Alert key={index} dismissible variant={alert.type} className='alert2'>
+          <Alert key={index} dismissible variant={alert.type}>
             <Alert.Heading>
               {alert.message}
             </Alert.Heading>

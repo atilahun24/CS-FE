@@ -7,6 +7,7 @@ const CarForm = ({ car, handleSubmit, handleChange, cancelPath }) => (
 
     <label>Vehicle Make</label>
     <input
+      className="form-control"
       required
       placeholder="Make"
       value={car.make}
@@ -16,6 +17,7 @@ const CarForm = ({ car, handleSubmit, handleChange, cancelPath }) => (
 
     <label>Vehicle Model</label>
     <input
+      className="form-control"
       required
       placeholder="Model"
       value={car.model}
@@ -25,6 +27,7 @@ const CarForm = ({ car, handleSubmit, handleChange, cancelPath }) => (
 
     <label>Vehicle Year</label>
     <input
+      className="form-control"
       required
       placeholder="Year"
       value={car.year}
@@ -34,6 +37,7 @@ const CarForm = ({ car, handleSubmit, handleChange, cancelPath }) => (
 
     <label>Vehicle Type</label>
     <input
+      className="form-control"
       required
       placeholder="Type"
       value={car.vehicle_type}
@@ -43,6 +47,7 @@ const CarForm = ({ car, handleSubmit, handleChange, cancelPath }) => (
 
     <label>Overall Vehicle Grade</label>
     <input
+      className="form-control"
       required
       placeholder="Grade"
       value={car.grade}
@@ -51,13 +56,14 @@ const CarForm = ({ car, handleSubmit, handleChange, cancelPath }) => (
     />
 
     <label>Review</label>
-    <input
+    <textarea
+      className="form-control"
       required
-      placeholder="Write Your Review Here"
+      rows="3"
       value={car.description}
       name="description"
       onChange={handleChange}
-    />
+    ></textarea>
 
     <button type="submit" className="btn btn-success" id="submitReview">Submit</button>
     <Link to={cancelPath}>

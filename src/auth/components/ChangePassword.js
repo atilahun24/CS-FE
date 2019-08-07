@@ -42,6 +42,7 @@ class ChangePassword extends Component {
 
         <label htmlFor="oldpw">Old Password</label>
         <input
+          className="form-control"
           required
           name="oldPassword"
           value={oldPassword}
@@ -51,6 +52,7 @@ class ChangePassword extends Component {
         />
         <label htmlFor="newPassword">New Password</label>
         <input
+          className="form-control"
           required
           name="newPassword"
           value={newPassword}
@@ -58,7 +60,7 @@ class ChangePassword extends Component {
           placeholder="New Password"
           onChange={this.handleChange}
         />
-        <button type="submit">Change Password</button>
+        <button type="submit" className="btn btn-success">Change Password</button>
       </form>
     )
   }

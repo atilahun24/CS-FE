@@ -1,17 +1,70 @@
+@import '~bootstrap/scss/bootstrap';
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15% auto 0;
+  max-width: 600px;
+  // background-image: url("https://i.imgur.com/eNqjzGa.png");
+
+  h3,
+  input {
+    margin-bottom: 5%;
+  }
+
+  button {
+    align-self: flex-end;
+    max-width: 200px;
+  }
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  // background-image: url("https://s8096.pcdn.co/wp-content/uploads/2013/08/car-brands.jpg");
+
+  // &::before {
+  //   background-image: ;
+  // }
 }
 
 .alert {
-  margin: 30px;
+  position: fixed;
+  top: 300px;
+  right: 0;
+  left: 30px;
+  z-index: 1000;
+  max-width: 600px;
+  margin-right: auto;
 }
 
-.alert2 {
-  margin-top: 100px;
+.carGrade {
+  display: inline-block;
+  border-radius: 3px;
+  border: 2px solid rgba(0,0,0,.15);
+  padding: .5rem .75rem;
+  margin-left: 5px;
+  margin-bottom: 0;
+  font-weight: bolder;
+  color: $white;
+  text-shadow: 1px 1px 0 rgba(0,0,0,.5);
+
+
+  &.a {
+    background-color: $success;
+  }
+  &.b {
+    background-color: $info;
+  }
+  &.c  {
+    background-color: $warning;
+  }
+  &.d, &.f {
+    background-color: $danger;
+  }
 }
+
 
 .carousel-inner {
   height: 100%;
@@ -60,6 +113,7 @@ body {
   border-style: inset;
   // background-image: url("https://s8096.pcdn.co/wp-content/uploads/2013/08/car-brands.jpg");
   background-color: #e6ecff;
+  padding: 30px;
 }
 
 #list {
